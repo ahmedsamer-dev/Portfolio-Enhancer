@@ -20,8 +20,10 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="font-display font-bold text-2xl tracking-tighter hover:text-primary transition-colors duration-300">
-            AS<span className="text-primary">.</span>
+          <Link href="/" className="font-mono font-bold text-xl tracking-tighter hover:text-primary transition-colors duration-300 flex items-center gap-1 group">
+            <span className="text-muted-foreground group-hover:text-primary transition-colors">&lt;</span>
+            Ahmed Samer
+            <span className="text-muted-foreground group-hover:text-primary transition-colors">/&gt;</span>
           </Link>
 
           {/* Desktop Nav */}
