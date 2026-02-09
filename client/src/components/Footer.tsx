@@ -27,7 +27,7 @@ export function Footer() {
               <Mail className="w-5 h-5" />
             </a>
             <a 
-              href="#" // Add Linkedin URL if available
+              href="https://www.linkedin.com/in/ahmed-samir-656940309/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-300 transform hover:scale-110"
