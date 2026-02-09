@@ -1,0 +1,185 @@
+Improve and refine my existing developer portfolio without rebuilding it from scratch. Keep the current structure and layout but enhance it into a modern, cinematic, premium-quality freelance developer portfolio suitable for a junior developer.
+
+GENERAL DESIGN:
+
+Apply a modern dark premium theme inspired by SaaS developer portfolios.
+
+Clean minimal UI with contemporary developer-style colors.
+
+Strong visual hierarchy.
+
+Improve spacing, typography, and alignment.
+
+Add smooth micro-interactions and subtle animations.
+
+Fully responsive layout.
+
+LOGO / NAME HEADER:
+
+Replace the static logo with my name: "Ahmed Samer".
+
+Add a coding-style typing animation where the name appears like live code being written.
+
+Include blinking cursor animation.
+
+Terminal-inspired developer intro feeling.
+
+Add subtle neon glow effect (minimal and professional).
+
+Animation should feel smooth, cinematic, and developer-focused.
+
+HEADERS & NAVIGATION:
+
+Improve all headers across the website.
+
+Make headers modern, clean, and visually attractive.
+
+Add elegant hover effects:
+
+underline slide animation
+
+smooth color transitions
+
+subtle glow on hover.
+
+Improve navigation UI and interactions.
+
+STRUCTURE:
+
+Convert the website into a multi-page layout instead of a single long page.
+
+Create separate pages:
+
+Home
+
+About Me
+
+Skills & Expertise
+
+Projects
+
+Contact
+
+ABOUT ME SECTION:
+
+Improve the text to sound more professional, clean, and confident without pretending to be senior level. Maintain focus on C# backend development, clean architecture, scalable systems, and continuous learning.
+
+CONTENT CHANGES:
+
+Change:
+
+const role = ".NET Backend Developer";
+
+TO:
+
+const role = "C# Programmer";
+
+Update focus text to reflect professional C# backend developer positioning.
+
+Remove:
+
+"Built with React + TypeScript + Tailwind"
+
+Change section title:
+
+"Professional Journey"
+
+TO:
+
+"Summary"
+
+FOOTER:
+
+Remove footer navigation links (About / Skills / Projects / Contact).
+
+Keep footer minimal and clean.
+
+Display only:
+
+© 2026 Ahmed Samer. All rights reserved.
+
+SKILLS & EXPERTISE:
+
+Redesign skills using modern cards or badges with:
+
+minimal icons
+
+clean spacing
+
+elegant hover animations
+
+modern developer aesthetic.
+
+Categories:
+
+Backend Development:
+
+ASP.NET Core
+
+Web API Development
+
+RESTful API Design
+
+Clean Architecture Basics
+
+Programming:
+
+C#
+
+Object-Oriented Programming (OOP)
+
+Problem Solving
+
+Database:
+
+SQL Server
+
+Database Design
+
+ERD
+
+SQL Queries (JOIN, Subquery, Functions, Views)
+
+Tools:
+
+Git & GitHub
+
+Visual Studio
+
+Postman
+
+PROJECTS:
+
+Include only one project:
+
+Project Name: JobWebSystem
+
+Display using modern professional project card design suitable for freelance clients.
+
+CONTACT:
+
+Make clickable links:
+
+Email: ahmedsameryt@gmail.com
+
+WhatsApp: +201009789873
+
+GitHub: https://github.com/ahmedsamer-dev/
+
+STYLE:
+
+Cinematic developer portfolio aesthetic.
+
+Premium dark UI.
+
+Clean developer-focused layout.
+
+Elegant hover interactions.
+
+Smooth page transitions.
+
+Realistic freelance developer feel (not fake senior).
+
+OUTPUT:
+
+Provide updated editable responsive code with live preview.
