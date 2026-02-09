@@ -1,7 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { SectionHeader } from "@/components/SectionHeader";
 import { motion } from "framer-motion";
-import { Mail, Phone, Github, MessageSquare } from "lucide-react";
+import { Mail, Phone, Github, MessageSquare, Linkedin } from "lucide-react";
 
 export default function Contact() {
   const contactMethods = [
@@ -18,6 +18,13 @@ export default function Contact() {
       value: "+20 100 978 9873",
       href: "https://wa.me/201009789873",
       color: "text-green-500"
+    },
+    {
+      icon: <Linkedin className="w-8 h-8" />,
+      title: "LinkedIn",
+      value: "Ahmed Samir",
+      href: "https://www.linkedin.com/in/ahmed-samir-656940309/",
+      color: "text-blue-600"
     },
     {
       icon: <Github className="w-8 h-8" />,
@@ -39,7 +46,7 @@ export default function Contact() {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto w-full">
           {contactMethods.map((method, index) => (
             <motion.a
               key={method.title}
