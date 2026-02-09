@@ -20,7 +20,7 @@ export default function Skills() {
     <Layout>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <SectionHeader 
-          title="Technical Arsenal" 
+          title="Skills" 
           subtitle="A comprehensive list of the technologies and tools I use to build robust applications."
         />
 
