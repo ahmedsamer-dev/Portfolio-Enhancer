@@ -24,45 +24,28 @@ export default function Home() {
             <span className="text-sm font-mono text-primary/80">Welcome to my portfolio v1.0</span>
           </motion.div>
 
-          <h1 className="text-5xl md:text-8xl font-display font-bold mb-6 tracking-tight">
-            {text.split("").map((char, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.1, delay: index * 0.1 }}
-                className="inline-block hover:text-primary transition-colors cursor-default"
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            ))}
-            <motion.span
-              animate={{ opacity: [0, 1, 0] }}
-              transition={{ repeat: Infinity, duration: 0.8 }}
-              className="text-primary inline-block ml-1"
-            >
-              _
-            </motion.span>
+          <h1 className="text-5xl md:text-8xl font-display font-bold mb-4 tracking-tight">
+            C# Backend Developer
           </h1>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.2 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <p className="text-xl md:text-2xl text-muted-foreground font-light mb-10 max-w-2xl mx-auto">
-              <span className="text-foreground font-medium">C# Programmer</span> crafting scalable backend systems and clean architecture solutions.
+            <p className="text-xl md:text-2xl text-muted-foreground font-light mb-12 max-w-3xl mx-auto leading-relaxed">
+              Building <span className="text-primary font-medium">scalable APIs</span> with ASP.NET Core & Clean Architecture
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/projects" className="group relative px-8 py-4 bg-primary text-primary-foreground font-bold rounded-full overflow-hidden transition-all hover:shadow-[0_0_20px_rgba(0,255,255,0.4)]">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link href="/projects" className="group relative px-10 py-4 bg-primary text-primary-foreground font-bold rounded-xl overflow-hidden transition-all hover:shadow-[0_0_30px_rgba(0,255,255,0.4)] hover:-translate-y-1">
                 <span className="relative z-10 flex items-center gap-2">
-                  View Projects <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  View Projects <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </Link>
               
-              <Link href="/contact" className="px-8 py-4 text-foreground font-medium border border-white/10 rounded-full hover:bg-white/5 transition-colors">
+              <Link href="/contact" className="px-10 py-4 text-foreground font-medium border border-white/10 rounded-xl hover:bg-white/5 transition-all hover:-translate-y-1 backdrop-blur-sm">
                 Contact Me
               </Link>
             </div>
