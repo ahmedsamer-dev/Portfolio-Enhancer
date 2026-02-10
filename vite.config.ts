@@ -5,7 +5,7 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
   // ✅ مهم جداً علشان GitHub Pages (اسم repo بالظبط)
-  base: "/Portfolio-Enhancer/",
+  base: "/",
 
   plugins: [
     react(),
