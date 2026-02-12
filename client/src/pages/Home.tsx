@@ -13,10 +13,10 @@ export default function Home() {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px]" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[100px]" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
-            {/* Left Column: Content */}
-            <div className="flex-1 text-center lg:text-left space-y-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full py-12 lg:py-0">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+            {/* LEFT SIDE: Content */}
+            <div className="flex-1 text-center lg:text-left space-y-8 order-2 lg:order-1">
               {/* Top Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -78,18 +78,18 @@ export default function Home() {
               </motion.div>
             </div>
 
-            {/* Right Column: Profile Image */}
+            {/* RIGHT SIDE: Profile Image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className="relative group"
+              className="relative group order-1 lg:order-2"
             >
               {/* Outer Glow */}
-              <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-2xl group-hover:bg-primary/30 transition-colors duration-500" />
+              <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-3xl group-hover:bg-primary/40 transition-all duration-500" />
               
               {/* Image Frame */}
-              <div className="relative aspect-square w-64 md:w-80 lg:w-96 rounded-2xl overflow-hidden border border-white/10 p-2 bg-white/5 backdrop-blur-sm shadow-2xl transition-all duration-500 group-hover:scale-[1.02] group-hover:border-primary/50">
+              <div className="relative aspect-square w-64 md:w-80 lg:w-[400px] rounded-2xl overflow-hidden border border-white/10 p-2 bg-white/5 backdrop-blur-md shadow-2xl transition-all duration-500 group-hover:scale-[1.05] group-hover:border-primary/50">
                 <div className="w-full h-full rounded-xl overflow-hidden relative">
                   <img 
                     src="/profile.jpeg" 
@@ -102,8 +102,8 @@ export default function Home() {
               </div>
 
               {/* Decorative elements */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-xl" />
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-xl" />
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-2xl group-hover:bg-accent/30 transition-all duration-500" />
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary/20 rounded-full blur-2xl group-hover:bg-primary/30 transition-all duration-500" />
             </motion.div>
           </div>
         </div>
