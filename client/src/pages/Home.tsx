@@ -32,9 +32,10 @@ export default function Home() {
 
               <div className="space-y-4">
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-tight">
-                  .NET <span className="text-primary">Full Stack</span> Developer
+                  .NET <span className="text-primary">Full Stack</span>{" "}
+                  Developer
                 </h1>
-                
+
                 {/* Tech stack hint */}
                 <p className="text-sm md:text-base uppercase tracking-[0.2em] text-primary/60 font-mono">
                   ASP.NET Core • C# • Web API • SQL Server
@@ -50,9 +51,11 @@ export default function Home() {
               >
                 <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                   Building{" "}
-                  <span className="text-primary font-medium">scalable APIs</span>{" "}
-                  with ASP.NET Core & Clean Architecture, and modern full-stack web
-                  applications.
+                  <span className="text-primary font-medium">
+                    scalable APIs
+                  </span>{" "}
+                  with ASP.NET Core & Clean Architecture, and modern full-stack
+                  web applications.
                 </p>
 
                 {/* Buttons */}
@@ -87,13 +90,13 @@ export default function Home() {
             >
               {/* Outer Glow */}
               <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-3xl group-hover:bg-primary/40 transition-all duration-500" />
-              
+
               {/* Image Frame */}
               <div className="relative aspect-square w-64 md:w-80 lg:w-[400px] rounded-2xl overflow-hidden border border-white/10 p-2 bg-white/5 backdrop-blur-md shadow-2xl transition-all duration-500 group-hover:scale-[1.05] group-hover:border-primary/50">
                 <div className="w-full h-full rounded-xl overflow-hidden relative">
-                  <img 
-                    src="/profile.png" 
-                    alt="Ahmed Samer" 
+                  <img
+                    src="/profile.jpg"
+                    alt="Ahmed Samer"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   {/* Subtle Gradient Overlay */}
