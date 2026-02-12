@@ -1,0 +1,90 @@
+Act as a senior frontend UI engineer improving an existing .NET Full Stack Developer portfolio.
+
+IMPORTANT RULES:
+
+- Do NOT redesign from scratch.
+- Maintain current dark modern cinematic developer aesthetic.
+- Keep existing routing structure.
+- Improve layout professionally without breaking components.
+- Keep responsive behavior.
+
+--------------------------------------------------
+
+PROFILE IMAGE:
+
+Use this image: /profile.jpg
+
+Add a professional profile image into the Hero (Home) section.
+
+Requirements:
+
+- Desktop: image positioned beside headline text (split layout).
+- Mobile: image stacked above or below content cleanly.
+- Add modern rounded frame (rounded-2xl).
+- Add subtle glow or gradient border matching dark theme.
+- Add soft hover effect (scale or glow).
+- Maintain cinematic developer style.
+
+--------------------------------------------------
+
+HERO SECTION IMPROVEMENTS:
+
+- Highlight ".NET Full Stack Developer".
+- Improve visual hierarchy.
+- Add tech stack hint under headline:
+  ASP.NET Core • C# • Web API • SQL Server.
+- Improve spacing and alignment.
+- Keep CTA buttons visually strong.
+
+--------------------------------------------------
+
+ABOUT PAGE:
+
+- Update About Me positioning to ".NET Full Stack Developer".
+- Keep realistic junior/intermediate tone.
+- Focus on:
+  ASP.NET Core
+  Web API
+  Clean Architecture
+  SQL Server
+  Full-stack development.
+- Remove "Education & Training" section completely.
+
+--------------------------------------------------
+
+LAYOUT OPTIMIZATION:
+
+- Fix page width and height balance.
+- Improve vertical spacing between sections.
+- Avoid empty spaces or crowded areas.
+- Make layout feel like modern SaaS developer portfolio.
+
+--------------------------------------------------
+
+CARD PLACEMENT:
+
+- Add visually balanced cards where appropriate:
+  - Skills section.
+  - About section highlights.
+  - Projects section.
+- Add subtle hover animations.
+
+--------------------------------------------------
+
+PAGE TRANSITIONS:
+
+- Add smooth page transition animations between routes.
+- Use framer-motion.
+- Keep animations lightweight.
+
+--------------------------------------------------
+
+PERFORMANCE:
+
+- Avoid heavy animations.
+- Do not add new libraries.
+- Keep clean Tailwind structure.
+
+OUTPUT:
+
+Return ONLY updated code sections with improvements.
