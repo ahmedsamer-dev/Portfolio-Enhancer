@@ -12,8 +12,9 @@ const projects = [
       ar: "نظام التوظيف الإلكتروني",
     },
     description: {
-      en: "Modern job management system built with ASP.NET Core MVC using clean architecture principles and scalable backend design.",
-      ar: "نظام حديث لإدارة الوظائف مبني باستخدام ASP.NET Core MVC مع تطبيق مبادئ الهندسة النظيفة وقابلية التوسع.",
+      en: "A full recruitment management platform where administrators can manage job listings through a dedicated dashboard, publish new opportunities, and oversee applications. Users can register, browse available jobs, and apply seamlessly through a structured workflow. Built with ASP.NET Core MVC following clean architecture principles for scalability and maintainability.",
+
+      ar: "منصة متكاملة لإدارة التوظيف تتيح للأدمن إدارة الوظائف من خلال لوحة تحكم مخصصة، إضافة فرص جديدة ومتابعة طلبات التقديم. يمكن للمستخدمين التسجيل وتصفح الوظائف والتقديم عليها بسهولة ضمن نظام منظم. تم تطوير المشروع باستخدام ASP.NET Core MVC مع تطبيق مبادئ Clean Architecture لضمان قابلية التوسع وسهولة الصيانة.",
     },
     role: {
       en: ".NET Full Stack Developer - Built backend architecture and admin dashboard.",
@@ -96,7 +97,7 @@ export default function Projects() {
             </div>
 
             {/* CONTENT */}
-            <div className="p-8 space-y-6">
+            <div className="p-8 space-y-6 mt-10">
               <h3 className="text-3xl font-bold">{project.title[lang]}</h3>
 
               <p className="text-muted-foreground">
@@ -104,7 +105,7 @@ export default function Projects() {
               </p>
 
               {/* FEATURES */}
-              <div>
+              <div className="mt-8">
                 <h4 className="text-primary font-mono mb-2">
                   {isRtl ? "المميزات" : "Features"}
                 </h4>
