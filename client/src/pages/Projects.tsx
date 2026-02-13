@@ -16,11 +16,10 @@ const projects = [
       ar: "نظام حديث لإدارة الوظائف مبني باستخدام ASP.NET Core MVC مع تطبيق مبادئ الهندسة النظيفة وقابلية التوسع.",
     },
     role: {
-      en: ".NET Full Stack Developer - Built backend architecture, database design, authentication system and admin dashboard.",
-      ar: "مطور .NET Full Stack - قمت ببناء هيكلة المشروع وقاعدة البيانات ونظام تسجيل الدخول ولوحة تحكم الإدارة.",
+      en: ".NET Full Stack Developer - Built backend architecture and admin dashboard.",
+      ar: "مطور .NET Full Stack - قمت ببناء هيكلة المشروع ولوحة التحكم.",
     },
 
-    // 👇 الصورة من public folder (VITE WAY)
     imageUrl: "/project-mockup.png",
 
     features: {
@@ -28,19 +27,15 @@ const projects = [
         "User Registration & Login",
         "Browse available jobs",
         "Apply for jobs (prevent duplicate applications)",
-        "View user's applications",
-        "Admin dashboard to manage applications",
-        "Accept / Reject job applications",
-        "Modern UI with Bootstrap 5",
+        "Admin dashboard",
+        "Accept / Reject applications",
       ],
       ar: [
-        "تسجيل المستخدمين وتسجيل الدخول",
-        "تصفح الوظائف المتاحة",
-        "التقديم على الوظائف مع منع التكرار",
-        "عرض طلبات المستخدم",
-        "لوحة تحكم للإدارة",
-        "قبول أو رفض الطلبات",
-        "واجهة حديثة باستخدام Bootstrap 5",
+        "تسجيل المستخدمين",
+        "تصفح الوظائف",
+        "منع التقديم المكرر",
+        "لوحة تحكم الإدارة",
+        "قبول ورفض الطلبات",
       ],
     },
 
@@ -49,10 +44,9 @@ const projects = [
       "Entity Framework Core",
       "SQL Server",
       "Bootstrap 5",
-      "Git & GitHub",
     ],
 
-    tags: ["C#", ".NET", "ASP.NET Core", "SQL Server"],
+    tags: ["C#", ".NET", "ASP.NET Core"],
     link: "https://github.com/ahmedsamer-dev/jobwebsystem",
   },
 ];
@@ -68,15 +62,13 @@ export default function Projects() {
           <SectionHeader
             title={isRtl ? "مشاريعي" : "Featured Projects"}
             subtitle={
-              isRtl
-                ? "مشاريع FullStack و Backend حقيقية"
-                : "Real-world full stack and backend projects."
+              isRtl ? "مشاريع FullStack و Backend" : "Real-world projects"
             }
           />
 
           <button
             onClick={() => setLang(lang === "en" ? "ar" : "en")}
-            className="px-5 py-2 bg-white/5 border border-white/10 rounded-full"
+            className="px-5 py-2 bg-white/5 border border-white/10 rounded-full hover:border-primary transition-all"
           >
             {lang === "en" ? "AR" : "EN"}
           </button>
@@ -90,11 +82,16 @@ export default function Projects() {
             className="grid lg:grid-cols-2 gap-10 bg-card rounded-3xl border border-white/10 overflow-hidden"
           >
             {/* IMAGE */}
-            <div className="p-6">
+            <div className="p-6 group relative">
+              {/* glow */}
+              <div className="absolute inset-0 bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition duration-500" />
+
               <img
                 src={project.imageUrl}
                 alt={project.title[lang]}
-                className="rounded-xl w-full h-full object-cover"
+                className="relative rounded-xl w-full h-full object-contain
+                transition-all duration-500
+                group-hover:scale-105"
               />
             </div>
 
@@ -125,21 +122,37 @@ export default function Projects() {
 
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, i) => (
-                    <span key={i} className="bg-primary/10 px-3 py-1 rounded">
+                    <span
+                      key={i}
+                      className="bg-primary/10 border border-primary/20 px-3 py-1 rounded"
+                    >
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
 
-              {/* BUTTONS */}
-              <div className="flex gap-4">
-                <a href={project.link} target="_blank">
-                  <button className="px-6 py-3 bg-primary rounded-xl flex gap-2">
-                    GitHub <Github size={16} />
-                  </button>
-                </a>
-              </div>
+              {/* BUTTON */}
+              <a href={project.link} target="_blank">
+                <button
+                  className="group px-8 py-3 rounded-xl
+                  border border-primary/30
+                  bg-primary/10
+                  hover:bg-primary
+                  text-primary
+                  hover:text-black
+                  transition-all duration-300
+                  flex items-center gap-2
+                  hover:shadow-[0_0_20px_rgba(0,255,255,0.6)]
+                  hover:-translate-y-1"
+                >
+                  GitHub
+                  <Github
+                    size={16}
+                    className="group-hover:rotate-12 transition"
+                  />
+                </button>
+              </a>
             </div>
           </motion.div>
         ))}
