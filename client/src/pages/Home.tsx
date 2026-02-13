@@ -95,7 +95,7 @@ export default function Home() {
               <div className="relative aspect-square w-64 md:w-80 lg:w-[400px] rounded-2xl overflow-hidden border border-white/10 p-2 bg-white/5 backdrop-blur-md shadow-2xl transition-all duration-500 group-hover:scale-[1.05] group-hover:border-primary/50">
                 <div className="w-full h-full rounded-xl overflow-hidden relative">
                   <img
-                    src="/profile.jpg"
+                    src="/profile.jpeg"
                     alt="Ahmed Samer"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
