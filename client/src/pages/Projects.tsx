@@ -154,15 +154,15 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="px-8 py-3 bg-primary text-primary-foreground text-xs font-bold rounded-xl hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] hover:-translate-y-0.5 transition-all flex items-center gap-2"
                     >
-                      {isRtl ? "رابط المشروع" : "Live Demo"} <ExternalLink className="w-3.5 h-3.5" />
+                      GitHub <Github className="w-3.5 h-3.5" />
                     </a>
                     <a
-                      href={project.link}
+                      href="https://wa.me/201009789873"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-8 py-3 border border-white/10 text-xs font-bold rounded-xl hover:bg-white/5 hover:-translate-y-0.5 transition-all flex items-center gap-2"
                     >
-                      GitHub <Github className="w-3.5 h-3.5" />
+                      {isRtl ? "لمزيد من التفاصيل تواصل معنا" : "Contact for details"} <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>
                 </div>
