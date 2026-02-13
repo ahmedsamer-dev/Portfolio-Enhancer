@@ -1,7 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { SectionHeader } from "@/components/SectionHeader";
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { useState } from "react";
 
 const projects = [
@@ -13,14 +13,12 @@ const projects = [
     },
     description: {
       en: "A full recruitment management platform where administrators can manage job listings through a dedicated dashboard, publish new opportunities, and oversee applications. Users can register, browse available jobs, and apply seamlessly through a structured workflow. Built with ASP.NET Core MVC following clean architecture principles for scalability and maintainability.",
-
       ar: "منصة متكاملة لإدارة التوظيف تتيح للأدمن إدارة الوظائف من خلال لوحة تحكم مخصصة، إضافة فرص جديدة ومتابعة طلبات التقديم. يمكن للمستخدمين التسجيل وتصفح الوظائف والتقديم عليها بسهولة ضمن نظام منظم. تم تطوير المشروع باستخدام ASP.NET Core MVC مع تطبيق مبادئ Clean Architecture لضمان قابلية التوسع وسهولة الصيانة.",
     },
     role: {
       en: ".NET Full Stack Developer - Built backend architecture and admin dashboard.",
       ar: "مطور .NET Full Stack - قمت ببناء هيكلة المشروع ولوحة التحكم.",
     },
-
     imageUrl: "/project-mockup.png",
 
     features: {
@@ -83,21 +81,20 @@ export default function Projects() {
             className="grid lg:grid-cols-2 gap-10 bg-card rounded-3xl border border-white/10 overflow-hidden"
           >
             {/* IMAGE */}
-            <div className="p-6 group relative">
-              {/* glow */}
+            <div className="p-6 group relative flex items-center justify-center">
               <div className="absolute inset-0 bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition duration-500" />
 
               <img
                 src={project.imageUrl}
                 alt={project.title[lang]}
-                className="relative rounded-xl w-full h-full object-contain
+                className="relative rounded-xl w-full max-h-[450px] object-contain
                 transition-all duration-500
                 group-hover:scale-105"
               />
             </div>
 
             {/* CONTENT */}
-            <div className="p-8 space-y-6 mt-10">
+            <div className="p-8 space-y-6">
               <h3 className="text-3xl font-bold">{project.title[lang]}</h3>
 
               <p className="text-muted-foreground">
@@ -117,43 +114,42 @@ export default function Projects() {
                 </ul>
               </div>
 
-              {/* TECHNOLOGIES */}
+              {/* TECHNOLOGIES + GITHUB INLINE */}
               <div>
-                <h4 className="text-primary font-mono mb-2">Technologies</h4>
+                <h4 className="text-primary font-mono mb-3">Technologies</h4>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap items-center gap-3">
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-primary/10 border border-primary/20 px-3 py-1 rounded"
+                      className="bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-lg text-sm transition hover:bg-primary/20"
                     >
                       {tech}
                     </span>
                   ))}
+
+                  <a href={project.link} target="_blank">
+                    <button
+                      className="group px-6 py-2 rounded-xl
+                      border border-primary/30
+                      bg-primary/10
+                      hover:bg-primary
+                      text-primary
+                      hover:text-black
+                      transition-all duration-300
+                      flex items-center gap-2
+                      hover:shadow-[0_0_20px_rgba(0,255,255,0.6)]
+                      hover:-translate-y-1"
+                    >
+                      GitHub
+                      <Github
+                        size={16}
+                        className="group-hover:rotate-12 transition"
+                      />
+                    </button>
+                  </a>
                 </div>
               </div>
-
-              {/* BUTTON */}
-              <a href={project.link} target="_blank">
-                <button
-                  className="group px-8 py-3 rounded-xl
-                  border border-primary/30
-                  bg-primary/10
-                  hover:bg-primary
-                  text-primary
-                  hover:text-black
-                  transition-all duration-300
-                  flex items-center gap-2
-                  hover:shadow-[0_0_20px_rgba(0,255,255,0.6)]
-                  hover:-translate-y-1"
-                >
-                  GitHub
-                  <Github
-                    size={16}
-                    className="group-hover:rotate-12 transition"
-                  />
-                </button>
-              </a>
             </div>
           </motion.div>
         ))}
