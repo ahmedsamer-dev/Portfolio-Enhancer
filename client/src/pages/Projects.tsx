@@ -80,7 +80,7 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             className="grid lg:grid-cols-2 gap-10 bg-card rounded-3xl border border-white/10 overflow-hidden mb-12 shadow-2xl"
           >
-            {/* IMAGE - UI ENHANCEMENT */}
+            {/* IMAGE */}
             <div className="p-8 group relative flex items-center justify-center bg-white/[0.02]">
               <div className="absolute inset-0 bg-primary/5 blur-[120px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
@@ -115,7 +115,10 @@ export default function Projects() {
 
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
                   {project.features[lang].map((f, i) => (
-                    <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
+                    <li
+                      key={i}
+                      className="text-sm text-muted-foreground flex items-center gap-2"
+                    >
                       <span className="text-primary/40 text-[10px]">●</span>
                       {f}
                     </li>
@@ -123,7 +126,7 @@ export default function Projects() {
                 </ul>
               </div>
 
-              {/* TECHNOLOGIES + GITHUB INLINE */}
+              {/* TECH STACK */}
               <div className="space-y-4">
                 <h4 className="text-primary font-mono text-xs uppercase tracking-widest flex items-center gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary" />
@@ -139,31 +142,38 @@ export default function Projects() {
                       {tech}
                     </span>
                   ))}
-
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="group px-6 py-2 rounded-xl
-                    border border-primary/30
-                    bg-primary/10
-                    text-primary
-                    text-xs font-bold
-                    transition-all duration-500
-                    flex items-center gap-2
-                    hover:bg-primary
-                    hover:text-primary-foreground
-                    hover:shadow-[0_0_25px_rgba(0,255,255,0.4)]
-                    hover:-translate-y-0.5
-                    active:scale-95"
-                  >
-                    GitHub
-                    <Github
-                      size={14}
-                      className="group-hover:rotate-12 transition-transform duration-500"
-                    />
-                  </a>
                 </div>
+              </div>
+
+              {/* GITHUB BUTTON (SEPARATED) */}
+              <div className="flex flex-col gap-2 pt-2">
+                <span className="text-[10px] uppercase tracking-widest text-primary/70 font-mono">
+                  {isRtl ? "لمزيد من التفاصيل" : "More Details"}
+                </span>
+
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group w-fit px-6 py-2 rounded-xl
+                  border border-primary/30
+                  bg-primary/10
+                  text-primary
+                  text-xs font-bold
+                  transition-all duration-500
+                  flex items-center gap-2
+                  hover:bg-primary
+                  hover:text-primary-foreground
+                  hover:shadow-[0_0_30px_rgba(0,255,255,0.45)]
+                  hover:scale-[1.05]
+                  active:scale-95"
+                >
+                  GitHub
+                  <Github
+                    size={14}
+                    className="group-hover:rotate-12 transition-transform duration-500"
+                  />
+                </a>
               </div>
             </div>
           </motion.div>
