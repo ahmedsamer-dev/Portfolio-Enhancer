@@ -78,75 +78,90 @@ export default function Projects() {
             key={project.id}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="grid lg:grid-cols-2 gap-10 bg-card rounded-3xl border border-white/10 overflow-hidden"
+            className="grid lg:grid-cols-2 gap-10 bg-card rounded-3xl border border-white/10 overflow-hidden mb-12 shadow-2xl"
           >
-            {/* IMAGE */}
-            <div className="p-6 group relative flex items-center justify-center">
-              <div className="absolute inset-0 bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition duration-500" />
+            {/* IMAGE - UI ENHANCEMENT */}
+            <div className="p-8 group relative flex items-center justify-center bg-white/[0.02]">
+              <div className="absolute inset-0 bg-primary/5 blur-[120px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-              <img
-                src={project.imageUrl}
-                alt={project.title[lang]}
-                className="relative rounded-xl w-full max-h-[450px] object-contain
-                transition-all duration-500
-                group-hover:scale-105"
-              />
+              <div className="relative w-full h-full flex items-center justify-center p-4">
+                <img
+                  src={project.imageUrl}
+                  alt={project.title[lang]}
+                  className="relative rounded-2xl w-full max-h-[400px] object-contain
+                  transition-all duration-700 ease-out
+                  group-hover:scale-[1.03] drop-shadow-2xl"
+                />
+              </div>
             </div>
 
             {/* CONTENT */}
-            <div className="p-8 space-y-6">
-              <h3 className="text-3xl font-bold">{project.title[lang]}</h3>
-
-              <p className="text-muted-foreground">
-                {project.description[lang]}
-              </p>
+            <div className="p-8 md:p-12 space-y-8 flex flex-col justify-center">
+              <div className="space-y-3">
+                <h3 className="text-3xl md:text-4xl font-display font-bold group-hover:text-primary transition-colors">
+                  {project.title[lang]}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                  {project.description[lang]}
+                </p>
+              </div>
 
               {/* FEATURES */}
-              <div className="mt-8">
-                <h4 className="text-primary font-mono mb-2">
-                  {isRtl ? "المميزات" : "Features"}
+              <div className="space-y-3">
+                <h4 className="text-primary font-mono text-xs uppercase tracking-widest flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  {isRtl ? "المميزات" : "Key Features"}
                 </h4>
 
-                <ul className="space-y-1">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
                   {project.features[lang].map((f, i) => (
-                    <li key={i}>• {f}</li>
+                    <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
+                      <span className="text-primary/40 text-[10px]">●</span>
+                      {f}
+                    </li>
                   ))}
                 </ul>
               </div>
 
               {/* TECHNOLOGIES + GITHUB INLINE */}
-              <div>
-                <h4 className="text-primary font-mono mb-3">Technologies</h4>
+              <div className="space-y-4">
+                <h4 className="text-primary font-mono text-xs uppercase tracking-widest flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  {isRtl ? "التقنيات" : "Tech Stack"}
+                </h4>
 
                 <div className="flex flex-wrap items-center gap-3">
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-lg text-sm transition hover:bg-primary/20"
+                      className="bg-white/5 border border-white/10 px-4 py-2 rounded-xl text-xs font-mono font-medium transition hover:bg-primary/5 hover:border-primary/30"
                     >
                       {tech}
                     </span>
                   ))}
 
-                  <a href={project.link} target="_blank">
-                    <button
-                      className="group px-6 py-2 rounded-xl
-                      border border-primary/30
-                      bg-primary/10
-                      hover:bg-primary
-                      text-primary
-                      hover:text-black
-                      transition-all duration-300
-                      flex items-center gap-2
-                      hover:shadow-[0_0_20px_rgba(0,255,255,0.6)]
-                      hover:-translate-y-1"
-                    >
-                      GitHub
-                      <Github
-                        size={16}
-                        className="group-hover:rotate-12 transition"
-                      />
-                    </button>
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group px-6 py-2 rounded-xl
+                    border border-primary/30
+                    bg-primary/10
+                    text-primary
+                    text-xs font-bold
+                    transition-all duration-500
+                    flex items-center gap-2
+                    hover:bg-primary
+                    hover:text-primary-foreground
+                    hover:shadow-[0_0_25px_rgba(0,255,255,0.4)]
+                    hover:-translate-y-0.5
+                    active:scale-95"
+                  >
+                    GitHub
+                    <Github
+                      size={14}
+                      className="group-hover:rotate-12 transition-transform duration-500"
+                    />
                   </a>
                 </div>
               </div>
