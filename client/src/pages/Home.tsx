@@ -15,8 +15,10 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full py-12 lg:py-0">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+            
             {/* LEFT SIDE: Content */}
             <div className="flex-1 text-center lg:text-left space-y-8 order-2 lg:order-1">
+
               {/* Top Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -32,13 +34,13 @@ export default function Home() {
 
               <div className="space-y-4">
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-tight">
-                  .NET <span className="text-primary">Full Stack</span>{" "}
-                  Developer
+                  ASP.NET Core{" "}
+                  <span className="text-primary">Backend</span> Developer
                 </h1>
 
                 {/* Tech stack hint */}
                 <p className="text-sm md:text-base uppercase tracking-[0.2em] text-primary/60 font-mono">
-                  ASP.NET Core • C# • Web API • SQL Server
+                  ASP.NET Core • C# • REST APIs • SQL Server • Clean Architecture
                 </p>
               </div>
 
@@ -47,15 +49,21 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className="space-y-10"
+                className="space-y-6"
               >
                 <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                   Building{" "}
                   <span className="text-primary font-medium">
                     scalable APIs
                   </span>{" "}
-                  with ASP.NET Core & Clean Architecture, and modern full-stack
-                  web applications.
+                  that power real-world applications using ASP.NET Core,
+                  Clean Architecture, and modern backend best practices.
+                </p>
+
+                {/* Soft skills positioning */}
+                <p className="text-sm text-muted-foreground font-light max-w-xl mx-auto lg:mx-0">
+                  I help businesses turn ideas into reliable backend systems through clean code,
+                  clear communication, and practical problem-solving.
                 </p>
 
                 {/* Buttons */}
@@ -99,7 +107,6 @@ export default function Home() {
                     alt="Ahmed Samer"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  {/* Subtle Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-60" />
                 </div>
               </div>
@@ -108,6 +115,7 @@ export default function Home() {
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-2xl group-hover:bg-accent/30 transition-all duration-500" />
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary/20 rounded-full blur-2xl group-hover:bg-primary/30 transition-all duration-500" />
             </motion.div>
+
           </div>
         </div>
       </div>
